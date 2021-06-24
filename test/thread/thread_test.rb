@@ -14,6 +14,18 @@ class ThreadTest < Minitest::Test
     assert_equal true, results.include?('2')
   end
 
+  def test_thread_unsafe_instance_variable_count
+    results = run_many_times './lib/thread/thread_unsafe_instance_variable_count.rb'
+    assert_equal true, results.include?('1')
+    assert_equal true, results.include?('2')
+  end
+
+  def test_thread_unsafe_class_variable_count
+    results = run_many_times './lib/thread/thread_unsafe_class_variable_count.rb'
+    assert_equal true, results.include?('1')
+    assert_equal true, results.include?('2')
+  end
+
   private
 
   def run_many_times(file_name)

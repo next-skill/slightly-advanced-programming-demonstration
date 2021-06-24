@@ -7,10 +7,8 @@ threads = 2.times.map do |i|
     m.synchronize do
       tmp = count + 1
 
-      # ファイルを開く (時間のかかる処理ならなんでも良い)
-      open($0) do
-        # Do nothing
-      end
+      # 時間のかかる処理
+      open($0) {}
   
       count = tmp
     end
