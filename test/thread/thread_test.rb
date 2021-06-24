@@ -31,7 +31,7 @@ class ThreadTest < Minitest::Test
   def run_many_times(file_name)
     $stdout = StringIO.new
 
-    100.times do
+    1000.times do
       load file_name
     end
 
