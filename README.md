@@ -1,0 +1,2 @@
+# slightly-advanced-programming-demonstration
+マルチスレッドプログラミングやメタプログラミングのデモンストレーション用コード
